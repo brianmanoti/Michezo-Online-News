@@ -6,6 +6,14 @@
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
+@media (max-width: 600px) {
+    /* Styles for tablets and larger screens */
+  }
+  
+@media (max-width: 900px) {
+    /* Styles for desktops and larger screens */
+  }
+  
 
 body{
     display: flex;

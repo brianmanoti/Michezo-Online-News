@@ -6,14 +6,19 @@
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
-@media (max-width: 600px) {
-    /* Styles for tablets and larger screens */
-  }
   
-@media (max-width: 900px) {
-    /* Styles for desktops and larger screens */
-  }
-  
+@media (max-width: 768px) {
+  /* CSS styles for screens up to 768 pixels wide */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* CSS styles for screens between 769 and 1024 pixels wide */
+}
+
+@media (min-width: 1025px) {
+  /* CSS styles for screens wider than 1024 pixels */
+}
+
 
 body{
     display: flex;

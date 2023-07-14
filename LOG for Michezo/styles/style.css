@@ -45,12 +45,17 @@ header {
 .logo {
     font-size: 13px;
     color: #fff;
+    position: absolute;
+    position: absolute;
+    top: 0;
+    left: 0;
     user-select: none;
     display: inline-block;
     border-style: outline;
     font-weight: 100;
     background: transparent;
     font-weight: bolder;
+    position: absolute;
 }
 
 .search-container {

@@ -7,24 +7,34 @@
     font-family: 'poppins', sans-serif;
 }
   
-@media (max-width: 768px) {
-  /* CSS styles for screens up to 768 pixels wide */
-	body {
-		font-size: 14px;
-	}
+/* Default styles for all devices */
+body {
+  font-size: 16px;
 }
+
+/* Styles for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Styles for screens with a maximum width of 480px */
 @media (max-width: 480px) {
   body {
     font-size: 12px;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* CSS styles for screens between 769 and 1024 pixels wide */
+/* Responsive styles using relative units */
+h1 {
+  font-size: 4vw;  /* 4% of the viewport width */
+  margin-bottom: 2rem; /* 2 times the font size */
 }
 
-@media (min-width: 1025px) {
-  /* CSS styles for screens wider than 1024 pixels */
+p {
+  font-size: 1.5rem; /* 1.5 times the root element's font size */
+  line-height: 1.2; /* 1.2 times the font size */
 }
 
 

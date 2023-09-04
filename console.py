@@ -104,14 +104,14 @@ class Michezo(cmd.Cmd):
             		return False
 
         	try:
-            		clsname = line.split()[0]
+            		clsname = args[0]
             		eval("{}()".format(clsname))
         	except IndexError:
             		print('** class doesn\'t exist **')
             		return False
 
         	try:
-            		instanceid = line.split()[1]
+            		instanceid = args[1]
         	except IndexError:
             		print('** instance id missing **')
             		return False
@@ -124,14 +124,14 @@ class Michezo(cmd.Cmd):
             		return False
 
         	try:
-            		attributename = line.split()[2]
+            		attributename = args[2]
         	except IndexError:
             		print('** attribute name missing **')
             		return False
 
         	try:
-            		updatevalue = line.split()[3]
-        		except IndexError:
+            		updatevalue = args[3]
+        	except IndexError:
             		print('** value missing **')
             		return False
 

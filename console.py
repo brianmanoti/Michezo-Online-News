@@ -94,9 +94,57 @@ class Michezo(cmd.Cmd):
 					strarg=str(objs[i])
 					print(strarg)
 		return False
-			
+	def do_update(self, line):
+        	''' updates an instance based on class name and id'''
+        	args = line.split()
+        	flag = 0
 
+        	if len(line) == 0:
+            		print('** class name missing **')
+            		return False
 
-			
+        	try:
+            		clsname = line.split()[0]
+            		eval("{}()".format(clsname))
+        	except IndexError:
+            		print('** class doesn\'t exist **')
+            		return False
 
-	
+        	try:
+            		instanceid = line.split()[1]
+        	except IndexError:
+            		print('** instance id missing **')
+            		return False
+
+        	objs = storage.all()
+        	try:
+            		clschange = objs["{}.{}".format(clsname, instanceid)]
+        	except IndexError:
+            		print('** no instance found **')
+            		return False
+
+        	try:
+            		attributename = line.split()[2]
+        	except IndexError:
+            		print('** attribute name missing **')
+            		return False
+
+        	try:
+            		updatevalue = line.split()[3]
+        		except IndexError:
+            		print('** value missing **')
+            		return False
+
+       		if updatevalue.isdecimal() is True:
+            		setattr(clschange, attributename, int(updatevalue))
+            		storage.save()
+        	else:
+            		try:
+                		setattr(clschange, attributename, float(updatevalue))
+                		storage.save()
+            		except:
+                		setattr(clschange, attributename, str(updatevalue))
+                		storage.save()
+
+if __name__=='__main__':
+	Michezo().cmdloop()

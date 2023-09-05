@@ -4,12 +4,12 @@
 import sys
 import cmd
 import JSON
-from models.base_mode import Basemodel
+from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 from models import storage
-from models.users import Users
-from models.team import Teams
-from models.players import Players
+from models.users import User
+from models.team import Team
+from models.players import Player
 from models.news import News
 
 class Michezo(cmd.Cmd):

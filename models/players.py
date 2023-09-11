@@ -11,7 +11,10 @@ class Player(BaseModel):
 		age(int)
 		height(int): cm
 		team(str)
+		jersey(int)
 		player_id(str)
+		nationality(str)
+		strong_foot(str)
 	"""
 	first_name=""
 	last_name=""
@@ -19,3 +22,5 @@ class Player(BaseModel):
 	height=""
 	team=""
 	player_id=""
+	jersey=""
+	strong_foot=""

@@ -8,7 +8,7 @@ class News(BaseModel):
 
 	Attributes:
 		title(str)
-
+		
 	"""
 
 	title=""

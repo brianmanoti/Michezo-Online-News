@@ -1,7 +1,10 @@
 #usr/bin/env python3
+"""Creates User Class"""
+
+import models
+import sqlalchemy
 from models.base_model import BaseModel, Base
 from os import getenv
-import sqlalchemy
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
 from hashlib import md5
@@ -13,14 +16,14 @@ class User(BaseModel, Base):
 		email(str)
 		password(str)
 		username(str)
-		id(str)
+		user_id(str)
 	"""
 	if models.storage_t == 'db':
 		__tablename__ = 'users'
-		email = Column(String(), nullable= )
-		password = Column(String(), nullable= )
-		username = Column(String(), nullable= )
-		user_id = Column(String(), nullable= ) 
+		email = Column(String(128), nullable=False)
+		password = Column(String(128), nullable=False)
+		username = Column(String(128), nullable=False)
+		user_id = Column(String(128), nullable=False) 
 	else:
 		email = ""
 		password = ""

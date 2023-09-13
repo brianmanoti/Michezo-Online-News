@@ -32,6 +32,7 @@ class Team(BaseModel, Base):
 		"""Linking players to teams"""
 		player = relationship("Player", backref="team")
 	else:
+		id=""
 		team_name=""
 		team_nickname=""
 		stadium=""

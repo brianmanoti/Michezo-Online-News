@@ -12,6 +12,7 @@ from sqlalchemy.orm import relationship
 class Team(BaseModel, Base):
 	"""Team.
 
+	id(int)
 	team_name(str)
 	team_nickname(str)
 	stadium(str)
@@ -21,6 +22,7 @@ class Team(BaseModel, Base):
 	"""
 	if models.storage_t == 'db':
 		__tablename__ = 'teams'
+		id = Column(Integer, primarykey=True, nullable=False)
 		team_name = Column(String(60), nullable=False)
 		team_nickname = Column(String(60), nullable=False)
 		stadium = Column(String(60), nullable=False)

@@ -19,7 +19,7 @@ body{
 .navbar {
     display: flex;
     align-items: center;
-    height: 70px;
+    height: 80px;
     background-color: #eeeeee;
     padding: 0 8%;
 }
@@ -92,7 +92,7 @@ body{
 }
 .profile-dropdown-list {
     position: relative;
-    top: 68px;
+    top: 120px;
     width: 220px;
     right: 0;
     background-color: white;
@@ -103,11 +103,13 @@ body{
     transition: max-height 0.5s;
 }
 .profile-dropdown-list.active {
-    max-height: 500px;
+    max-height: 400px;
 }
 
 .profile-dropdown-list hr {
     border: 0.5px solid green;
+    width: 100%;
+    
 }
 
 .profile-dropdown-list-item {

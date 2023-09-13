@@ -3,14 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>profile</title>
 </head>
 <body>
-    <div class="sidebar">
-        <div id="twitterfeed">
-            
+    <nav class="navbar">
+        <img src="./images/logo.png" alt="logo" class="navbar-logo">
+
+        <ul class="navbar-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">teams</a></li>
+            <li><a href="#">transfers</a></li>
+            <li><a href="#">trending</a></li>
+            <li><a href="#">community</a></li>
+        </ul>
+
+        <div class="profile-dropdown">
+            <div class="profile-dropdown-btn" onclick="toggle()">
+                <div class="profile-img">
+                    <i class="fa-solid fa-circle"></i>
+                </div>
+                <span>
+                    Brian Manoti
+                    <i class="fa-solid fa-angle-down"></i>
+                </span>
+            </div>
+
+            <ul class="profile-dropdown-list">
+                <li class="profile-dropdown-list-item">
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                        Edit Profile
+                    </a>
+                </li>
+                <li class="profile-dropdown-list-item">
+                    <a href="#">
+                        <i class="fa-solid fa-sliders"></i>
+                        Settings
+                    </a>
+                </li>
+                <li class="profile-dropdown-list-item">
+                    <a href="#">
+                        <i class="fa-solid fa-circle-question"></i>
+                        Help & feedback
+                    </a>
+                    <hr >
+                </li>
+                <li class="profile-dropdown-list-item">
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        Log Out
+                    </a>
+                </li>
+            </ul>
         </div>
-        
-    </div>
+    </nav>
+<script src="./scripts/indexj.js"></script>
 </body>
 </html>

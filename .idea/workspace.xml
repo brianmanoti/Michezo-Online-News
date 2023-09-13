@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19dc5474-11d5-4d61-9124-693f6833b77c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/LOG for Michezo/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/LOG for Michezo/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LOG for Michezo/Team.html" beforeDir="false" afterPath="$PROJECT_DIR$/LOG for Michezo/Team.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LOG for Michezo/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/LOG for Michezo/news.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

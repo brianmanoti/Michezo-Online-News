@@ -9,9 +9,10 @@
             "server": "localhost",
             "port": 3306,
             "driver": "MySQL",
-            "database": "Users",
-            "username": "Brian",
-            "name": "Flask"
+            "name": "Michezo",
+            "username": "brianmanoti",
+            "password": "Jeneijder@254",
+            "database": "Michezo"
         }
     ]
 }

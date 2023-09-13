@@ -1,16 +1,15 @@
 from flask import Flask, url_for, render_template
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+from flask_bcrypt import Bcrypt
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 
-db = SQLAlchemy(app)
 
-class users(db.model):
-    id = db.column(db.Integer, primary_key=True)
-    
-@app.@app.route('/')
-def Hello_world():
-    return "hello _ there"
+
+@app.route('/')
+def home():
+    return render_template(index.html)
+
 
 if __name__ == '__main__':
     app.run

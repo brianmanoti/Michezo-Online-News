@@ -20,10 +20,10 @@ class User(BaseModel, Base):
 	"""
 	if models.storage_t == 'db':
 		__tablename__ = 'users'
+		user_id = Column(String(128), nullable=False)
+		username= Column(String(60)), nullable=False)
 		email = Column(String(60), unique=True, nullable=False)
-		password = Column(String(20), nullable=False)
-		username = Column(String(60), nullable=False)
-		user_id = Column(String(128), nullable=False) 
+		password = Column(String(20), nullable=False) 
 	else:
 		email = ""
 		password = ""

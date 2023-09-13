@@ -5,7 +5,7 @@ import models
 import sqlalchemy
 from models.base_model import BaseModel, Base
 from os import getenv
-from sqlalchemy import Column, String
+from sqlalchemy import Column, String, ForeignKey
 from sqlalchemy.orm import relationship
 
 
@@ -29,7 +29,7 @@ class Team(BaseModel, Base):
 		city = Column(String(60), nullable=False)	
 		coach = Column(String(60), nullable=False)
 		"""Defines foreign key relationship"""
-		players_id= Column(String(60), ForeignKey=('players.jersey'), nullable=False)
+		players_id= Column(Integer, ForeignKey=('players.jersey'), nullable=False)
 		"""Linking players to teams"""
 		player = relationship("Player", back_populates="team")
 	else:

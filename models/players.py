@@ -12,8 +12,7 @@ class Player(BaseModel, Base):
 	"""Player.
 
 	Attributes:
-		first_name(str)
-		last_name(str)
+		name(str)
 		age(int)
 		height(int): cm
 		team(str)
@@ -24,15 +23,23 @@ class Player(BaseModel, Base):
 	"""
 	if models.storage_t == 'db':
 		__tablename__ = 'players'
-		name = Column(String(128), nullable=False)
+		jersey = Column(Integer, primary_key = True)
+		name = Column(String(128), nullable = False)
+		age = Column(Integer, nullable = False)
+		height = Column(Integer, nullable = False)
+		nationality =  Column(String(128), nullable = False)
+		strong_foot = Column(String(128), nullable = False)
+
+		"""Foreign key relationship to 'teams' table"""
+		team_id = Column(Integer, ForeignKey("teams.id"), nullable=False)
+		"""Relationship with Team model"""
+		teams = relationship("Team", back_populates="players")
 	else:
-		first_name=""
-		last_name=""
+		jersey=""
+		name=""
 		age=""
 		height=""
-		team=""
-		player_id=""
-		jersey=""
+		nationality=""
 		strong_foot=""
 
 	def __init__(self, *args, **kwargs):

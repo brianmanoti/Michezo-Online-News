@@ -28,9 +28,10 @@ class Team(BaseModel, Base):
 		stadium = Column(String(60), nullable=False)
 		city = Column(String(60), nullable=False)	
 		coach = Column(String(60), nullable=False)
-		players = Column(String(60), nullable=False)
+		"""Defines foreign key relationship"""
+		players_id= Column(String(60), ForeignKey=('players.id'), nullable=False)
 		"""Linking players to teams"""
-		player = relationship("Player", backref="team")
+		player = relationship("Player", back_populates="team")
 	else:
 		id=""
 		team_name=""

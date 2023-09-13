@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container .news-article {
+    display: flex;
+    flex-direction: row;
+}
+.container .news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    width: 78.5%;
+}
+
+/* Main section for local news */
+.main-section {
+    padding: 10px;
+    background-color: #f2f2f2; /* Change this to your preferred background color */
+}
+
+/* Sidebar section for trending news */
+.sidebar-section {
+    flex: 1; /* 20% of the available space */
+    padding: 20px;
+    background-color: #e0e0e0; /* Change this to your preferred background color */
+    position: fixed;
+    top: 20px;
+    right: 0;
+    bottom: 0;
+    width: 19.4%; /* Set the width to 20% */
+}
+.main-section .article-content {
+    background-color: blue;
+    display: inline-block;
+    overflow-wrap: break-word;
+    width: 400px;
+}
+
+.main-section .news-article img {
+    width: 100%;
+    max-width: 400px;
+    height: auto
+}

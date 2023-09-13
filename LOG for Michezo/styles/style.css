@@ -6,38 +6,6 @@
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
-  
-/* Default styles for all devices */
-body {
-  font-size: 16px;
-}
-
-/* Styles for screens with a maximum width of 768px */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-}
-
-/* Styles for screens with a maximum width of 480px */
-@media (max-width: 480px) {
-  body {
-    font-size: 12px;
-  }
-}
-
-/* Responsive styles using relative units */
-h1 {
-  font-size: 4vw;  /* 4% of the viewport width */
-  margin-bottom: 2rem; /* 2 times the font size */
-}
-
-p {
-  font-size: 1.5rem; /* 1.5 times the root element's font size */
-  line-height: 1.2; /* 1.2 times the font size */
-}
-
-
 body{
     display: flex;
     justify-content: center;
@@ -47,7 +15,6 @@ body{
     background-size: cover;
     position: center;
 }
-
 header {
     position: fixed;
     top: 0;
@@ -61,60 +28,83 @@ header {
 }
 
 .logo {
-    font-size: 13px;
-    color: #fff;
-    position: absolute;
-    position: absolute;
-    top: 0;
-    left: 0;
-    user-select: none;
-    display: inline-block;
-    border-style: outline;
-    font-weight: 100;
-    background: transparent;
-    font-weight: bolder;
-    position: absolute;
+    margin-right: 50px;
+    display: block;
+}
+
+.logo img {
+    width: 200;
+    height: 100px;
 }
 
 .search-container {
     height: 30px;
+    position: relative;
     display: flex;
+    justify-content: center;
     cursor: pointer;
     padding: 10px 20px;
     background: #fff;
-    border-radius: 30px;
+    border-radius: 40px;
     align-items: center;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   }
 
   .search-container:hover input {
-    width: 400px;
+    width: 200px;
   }
 
   .search-container input {
+    font-size: 16px;
     width: 0;
     outline: none;
     border: none;
     font-weight: 500;
     transition: 0.8s;
-    background: transparent;
+    background-color: transparent;
   }
-  .search-container a .fa-solid {
+  .search-container a i.fa-solid {
     color: #162938;
     font-size: 18px;
+}
 
-  }
+.navigation {
+    width: max-content;
+    font-size: medium;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-block: 15px;
+    justify-content: space-between;
+}
 
 
-.navigation a {
+.navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
     position: relative;
-    font-size: 1.1em;
+    padding: 0;
+}
+
+.navigation ul li {
+    padding: 10px 20px;
+    position: relative;
+    margin: 0;
+
+}
+
+.navigation ul li a {
+    position: relative;
+    font-size: 1.0em;
     color: #fff;
     text-decoration: none;
     font-weight: 100;
-    margin-left: 40px;
+    margin-left: 20px;
 }
-.navigation a::after {
+
+.navigation ul li a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -128,12 +118,53 @@ header {
     transition: transform .5s;
 }
 
-.navigation a:hover::after {
+.navigation ul li a:hover::after {
     transform-origin: left;
     transform: scaleX(1);
 }
+
+.navigation ul li:hover .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+
+.navigation ul li a:hover + .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    font-weight: 500;
+}
+.navigation .dropdown-menu {
+    justify-content: center;
+    border-radius: 20px;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: teal;
+    padding: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+.dropdown-menu ul {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.navigation .dropdown-menu ul li a{
+    display: inline-block;
+    width: 100%;
+    color: rgb(5, 6, 6);
+    justify-content: center;
+    align-items: center;
+
+}
 .navigation .btnLogin-popup {
-    width: 130px;
+    width: 90px;
     height: 50px;
     background: transparent;
     border: 2px solid #fff;
@@ -143,8 +174,8 @@ header {
     font-size: 1.1em;
     color: #fff;
     font-weight: 500;
-    margin-left: 40px;
     transition: .5s;
+    position: inherit;
 }
 
 .navigation .btnLogin-popup:hover {
@@ -152,6 +183,33 @@ header {
     color: #162938;
 
 }
+.Land-page {
+    margin: 150px auto;
+    width: 70%;
+}
+
+.text-box {
+    color: #fff;
+}
+.text-box h2 {
+    font-size: 42px;
+}
+.text-box p {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.Land-page img {
+    max-width: 350px;
+    float: left;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    margin-right: 15px;
+    transition: scale 400ms;
+}
+
+
 
 .wrapper {
     position: relative;

@@ -4,7 +4,7 @@ import models
 import sqlalchemy
 from models.base_model import BaseModel, Base
 from os import getenv
-from sqlalchemy import Column, String
+from sqlalchemy import CheckConstraint, Column, String
 from sqlalchemy.orm import relationship
 
 
@@ -25,7 +25,7 @@ class Player(BaseModel, Base):
 		__tablename__ = 'players'
 		jersey = Column(Integer, primary_key = True)
 		name = Column(String(128), nullable = False)
-		age = Column(Integer, nullable = False)
+		age = Column(Integer, nullable = False, CheckConstraint('age>=0') """Ensure age is not negative or null"""
 		height = Column(Integer, nullable = False)
 		nationality =  Column(String(128), nullable = False)
 		strong_foot = Column(String(128), nullable = False)

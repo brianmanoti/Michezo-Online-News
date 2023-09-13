@@ -2,7 +2,7 @@
 """Creates User Class"""
 
 import models
-import sqlalchemy
+import sqlalchem
 from models.base_model import BaseModel, Base
 from os import getenv
 from sqlalchemy import Column, String
@@ -20,8 +20,8 @@ class User(BaseModel, Base):
 	"""
 	if models.storage_t == 'db':
 		__tablename__ = 'users'
-		email = Column(String(128), nullable=False)
-		password = Column(String(128), nullable=False)
+		email = Column(String(128), unique=True, nullable=False)
+		password = Column(String(20), nullable=False)
 		username = Column(String(128), nullable=False)
 		user_id = Column(String(128), nullable=False) 
 	else:

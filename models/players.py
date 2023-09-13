@@ -23,7 +23,7 @@ class Player(BaseModel, Base):
 	"""
 	if models.storage_t == 'db':
 		__tablename__ = 'players'
-		jersey = Column(Integer, primary_key = True)
+		jersey = Column(Integer, primary_key = True, nullable = False)
 		name = Column(String(128), nullable = False)
 		age = Column(Integer, nullable = False, CheckConstraint('age>=0') """Ensure age is not negative or null"""
 		height = Column(Integer, nullable = False)

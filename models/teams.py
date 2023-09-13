@@ -22,14 +22,14 @@ class Team(BaseModel, Base):
 	"""
 	if models.storage_t == 'db':
 		__tablename__ = 'teams'
-		id = Column(Integer, primarykey=True, nullable=False)
+		id = Column(Integer, primary_key=True, nullable=False)
 		team_name = Column(String(60), nullable=False)
 		team_nickname = Column(String(60), nullable=False)
 		stadium = Column(String(60), nullable=False)
 		city = Column(String(60), nullable=False)	
 		coach = Column(String(60), nullable=False)
 		"""Defines foreign key relationship"""
-		players_id= Column(String(60), ForeignKey=('players.id'), nullable=False)
+		players_id= Column(String(60), ForeignKey=('players.jersey'), nullable=False)
 		"""Linking players to teams"""
 		player = relationship("Player", back_populates="team")
 	else:

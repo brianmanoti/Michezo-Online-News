@@ -3,11 +3,15 @@
 Defines the FileStorage
 """
 import json
+import models
 from models.base_model import BaseModel
 from models.users import User
 from models.team import Team
 from models.players import Player
 from models.news import News
+from hashib import md5
+
+myclass = {"User":User, "BaseModel": BaseModel, "Team": Team, "Player": Player, "News": News}
 
 class FileStorage:
     """Abstracted storage engine.
@@ -19,8 +23,14 @@ class FileStorage:
     __file_path = "file.json"
     __objects = {}
 
-    def all(self):
+    def all(self, cls=None):
         """Dictionary __objects."""
+	if cls is not None:
+		new_dict = {}
+		for key, vaue in self.__objects.items():
+			if cls == value.__class__ or cls ==value.__class__.__name__:
+				new_dict[key] = value
+		return new_dict
         return FileStorage.__objects
 
     def new(self, obj):

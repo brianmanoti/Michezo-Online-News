@@ -81,13 +81,15 @@
         <div class="player">
             <img src="./images/Totenham.jpg" alt="Player">
             <div class="player-info">
-                <p><span>Jersey: </span>Brian Manoti</p>
-                <p><span>Name: </span>Kenyan</p>
-                <p><span>Age: </span>20</p>
-                <p><span>Height: </span>Right</p>
-                <p><span>Nationality: </span>kenyan</p>
-                <p><span>Strong foot: </span>Right</p>
+                {{%for y in info%}}
+                <p><span>Jersey: </span>{{y[0]}}</p>
+                <p><span>Name: </span>{{y[1]}}</p>
+                <p><span>Age: </span>{{y[2]}}</p>
+                <p><span>Height: </span>{{y[3]}}</p>
+                <p><span>Nationality: </span>{{y[5]}}</p>
+                <p><span>Strong foot: </span>{{y[6]}}</p>
                 <button class="player-info" id="player-info">player info</button>
+                {{%endfor%}}
             </div>
         </div>
         <div class="player">

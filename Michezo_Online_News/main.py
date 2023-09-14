@@ -1,10 +1,11 @@
-from flask import request, flash, redirect, url_for
-from flask_login import login_user, logout_user, current_user, login_required
-from app.models import User  # Import your User model from the correct location
-from app import app, db, bcrypt
+from flask import render_template, request, flash, redirect, url_for
+from app import app
 from app.models.player import Player
 from app.models.team import Team
 from app.models.user import User
+from flask_login import login_user, logout_user, current_user, login_required
+from app import db
+
 
 # Sample function to retrieve all players or players from a specific team
 def get_players_by_team(team_name=None):
@@ -37,7 +38,7 @@ def login():
         username = request.form['username']
         password = request.form['password']
         user = User.query.filter_by(username=username).first()
-        if user and bcrypt.check_password_hash(user.password, password):
+        if user and user.password == password:
             login_user(user)
             flash('Logged in successfully.', 'success')
             return redirect(url_for('index'))  # Replace 'index' with your desired route after login

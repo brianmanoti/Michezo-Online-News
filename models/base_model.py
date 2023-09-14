@@ -13,6 +13,8 @@ if models.storage_t == "db":
 else:
 	Base = object
 
+time = "%Y-%m-%d%T%H:%M:%S.%f"
+
 class BaseModel:
 """Parent Class"""
 	if models.storage_t == "db":

@@ -31,7 +31,7 @@ class Team(BaseModel, Base):
 		"""Defines foreign key relationship"""
 		players_id= Column(Integer, ForeignKey=('players.jersey'), nullable=False)
 		"""Linking players to teams"""
-		player = relationship("Player", back_populates="team")
+		players = relationship("Player", back_populates="teams")
 	else:
 		id=""
 		team_name=""

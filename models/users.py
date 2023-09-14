@@ -1,4 +1,4 @@
-#usr/bin/env python3
+usr/bin/env python3
 """Creates User Class"""
 
 import models

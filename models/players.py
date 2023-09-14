@@ -1,4 +1,4 @@
-#usr/bin/env python3
+#!/usr/bin/env python3
 """Class for players"""
 import models
 import sqlalchemy

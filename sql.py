@@ -1,3 +1,3 @@
 #!/usr/bin/env python3
-import sqlalchemy
-print(sqlalchemy.__version__)
+import MySQL
+print(MySQL.__version__)

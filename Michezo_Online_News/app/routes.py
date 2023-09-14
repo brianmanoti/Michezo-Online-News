@@ -9,10 +9,6 @@ from flask_bcrypt import Bcrypt
 # Initialize Flask app
 app = Flask(__name__)
 
-flask db init  
-flask db migrate -m "Initial migration"  
-flask db upgrade
-
 # Configure app
 app.config['SECRET_KEY'] = 'your_secret_key'  # Replace with a secure secret key
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://username:password@localhost/database_name'  # Replace with your MySQL connection details

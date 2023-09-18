@@ -1,4 +1,4 @@
-import db as db
+#import db as db
 import flask as flask
 from flask import Flask, render_template, request, flash, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy

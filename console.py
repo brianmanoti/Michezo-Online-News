@@ -55,7 +55,8 @@ class Michezo(cmd.Cmd):
 		else:
 			objs=storage.all()
 			for x in objs.keys():
-				if x == "{}.{}".format(args[0], args[1]):					print(objs[x])
+				if x == "{}.{}".format(args[0], args[1]):
+					print(objs[x])
 					return False
 			print("No instance found")
 	def do_destroy(self,line):

@@ -1,0 +1,68 @@
+function toggleMenu()
+{
+    document.body.classList.toggle("open-menu");
+    document.querySelector(".sidebar-menu-section").classList.toggle("menu-on");
+    document.querySelector(".overlay").classList.toggle("d-block");
+}
+
+const toggler_search = document.querySelector(".navbar-toggler-search");
+toggler_search && (toggler_search.onclick = function (e) {
+    e.preventDefault();
+    toggleMenu();
+});
+
+const toggler = document.querySelector(".navbar-toggler-wrapper");
+toggler && (toggler.onclick = function (e) {
+    e.preventDefault();
+    toggleMenu();
+});
+
+const closeMenu = document.querySelectorAll(".close-menu");
+
+function checkMode(e = !1) {
+    /*const o = document.querySelector("body");
+    var t = sessionStorage.getItem("mode");
+    e ? "dark" == t ? (sessionStorage.setItem("mode", "light"), o.classList.remove("dark-mode")) : (sessionStorage.setItem("mode", "dark"), o.classList.add("dark-mode")) : "dark" == t ? o.classList.add("dark-mode") : o.classList.remove("dark-mode")*/
+}
+
+closeMenu && closeMenu.forEach(e => {
+    e.onclick = function (e) {
+        e.preventDefault();
+        toggleMenu();
+    }
+}), checkMode();
+/*const darkLight = document.querySelector(".dark-light");
+darkLight && (darkLight.onclick = function (e) {
+    e.preventDefault(), checkMode(!0)
+});*/
+const sidebarMenuToggler = document.querySelectorAll(".sidebar-main-menu .toggle-submenu");
+sidebarMenuToggler && sidebarMenuToggler.forEach(o => {
+    o.onclick = function (e) {
+        e.preventDefault(), o.classList.toggle("open"), o.nextElementSibling.classList.toggle("d-block")
+    }
+});
+const sidebarTopMenuToggler = document.querySelectorAll(".top-level-link .toggle-submenu");
+sidebarTopMenuToggler && sidebarTopMenuToggler.forEach(o => {
+    o.onclick = function (e) {
+        e.preventDefault(), o.classList.toggle("open"), o.closest(".top-menu-item").classList.toggle("open-menu")
+    }
+});
+const sidebarShowMore = document.querySelectorAll(".top-menu-item .show-more");
+sidebarShowMore && sidebarShowMore.forEach(o => {
+    o.onclick = function (e) {
+        e.preventDefault(), o.classList.toggle("open"), o.closest(".top-menu-item").classList.toggle("has-height")
+    }
+});
+const countryListToggler = document.querySelectorAll(".country-list .item-toggle");
+countryListToggler && countryListToggler.forEach(o => {
+    o.onclick = function (e) {
+        e.preventDefault(), o.classList.toggle("open"), o.nextElementSibling.classList.toggle("d-block")
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const usernameInput = document.querySelector('input[name="q"]');
+    usernameInput.addEventListener("input", function(e){
+        e.target.value = e.target.value.toLowerCase();
+    });
+});

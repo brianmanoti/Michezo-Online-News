@@ -28,12 +28,17 @@ header {
 }
 
 .logo {
-    margin-right: 50px;
+    position: relative;
+    margin-right: 10px;
+    top: 12pt;
+    left: 12pt;
+    z-index: 100;
     display: block;
 }
 
 .logo img {
-    width: 200;
+    margin-left: 0px;
+    width: 100%;
     height: 100px;
 }
 
@@ -51,7 +56,7 @@ header {
   }
 
   .search-container:hover input {
-    width: 200px;
+    width: 100px;
   }
 
   .search-container input {

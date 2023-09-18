@@ -1,5 +1,4 @@
-import db as db
-import flask as flask
+#import Player as Player
 from flask import Flask, render_template, request, flash, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -11,7 +10,7 @@ app = Flask(__name__)
 
 # Configure app
 app.config['SECRET_KEY'] = 'your_secret_key'  # Replace with a secure secret key
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://username:password@localhost/database_name'  # Replace with your MySQL connection details
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://username:dmin@localhost/database_name'  # Replace with your MySQL connection details
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize database and migration
@@ -102,12 +101,27 @@ def display_teams():
 
 
 # Functions to retrive specific data from the database
+class Player:
+    pass
+
+
 def get_players_by_team(team_name=None):
     if team_name:
         players = Player.query.filter_by(team_name=team_name).all()
     else:
         players = Player.query.all()
     return players
+
+
+class Team:
+    def __init__(self, name, player):
+        self.name = name
+        self.player = player
+
+    def __repr__(self, name):
+        pass
+
+
 
 def get_team_info():
     teams = Team.query.all()

@@ -393,3 +393,25 @@ header {
     text-decoration: underline;
 }
 
+.View {
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    position: absolute;
+    bottom: 50px;
+    width: 80px;
+    border-style: groove;
+    border-color: #fff;
+    border-radius: 10px;
+
+}
+
+@media (max-width: 500px){
+    body {
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+    }
+}

@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page Title -->
     <title>Michezo Online News</title>
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <div class="logo"> <img src="./images/MichezoOnlineNews.png">
-        </div>
+        <!-- Logo -->
+        <div class="logo"> <img src="./images/MichezoOnlineNews.png"></div>
+        
+        <!-- Search Bar -->
         <div class="search-container">
             <input type="text" placeholder="Search">
             <a href="#"><i class="fas fa-search"></i></a>
         </div>
+        
+        <!-- Main Navigation -->
         <div class="Navigation-main">
             <nav class="navigation">
                 <ul>
+                    <!-- Home Link with Dropdown -->
                     <li>
                         <p><a href="./landing.html">Home</a></p>
                         <div class="dropdown-menu">
@@ -30,32 +39,37 @@
                             </ul>
                         </div>
                     </li>
-                <li>
-                    <p><a href="#">News</a></p>
-                </li>
-                <li>
-                    <p><a href="#">Teams</a></p>
-                    <div class="dropdown-menu">
-                        <ul>
-                            <li><a href="#">Team A</a></li>
-                            <li><a href="#">Team B</a></li>
-                            <li><a href="#">Team C</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <p><a href="#">Contact</a></p>
-                </li>
+                    <!-- Other Navigation Links -->
+                    <li>
+                        <p><a href="#">News</a></p>
+                    </li>
+                    <li>
+                        <p><a href="#">Teams</a></p>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="#">Team A</a></li>
+                                <li><a href="#">Team B</a></li>
+                                <li><a href="#">Team C</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <p><a href="#">Contact</a></p>
+                    </li>
                 </ul>
-                    <button class="btnLogin-popup">Login</button>
+                <!-- Login Button -->
+                <button class="btnLogin-popup">Login</button>
             </nav>
         </div>  
     </header>
 
+    <!-- Popup Login/Register Section -->
     <div class="wrapper">
-        <span class="icon-close">
+        <!-- Close Icon -->
+        <span class="icon-close" id="icon-close">
             <ion-icon name="close-outline"></ion-icon>
         </span>
+        <!-- Login Form -->
         <div class="form-box login">
             <h2>Login</h2>
             <form action="#" method="post">
@@ -82,6 +96,7 @@
             </form>
         </div>
 
+        <!-- Registration Form -->
         <div class="form-box register">
             <h2>Registration</h2>
             <form action="#" method="post">
@@ -110,7 +125,10 @@
             </form>
         </div>
     </div>
+
+    <!-- JavaScript Files -->
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 </html>
+

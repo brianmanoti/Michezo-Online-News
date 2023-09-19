@@ -65,9 +65,10 @@ header {
     outline: none;
     border: none;
     font-weight: 500;
-    transition: 0.8s;
+    transition-duration: 0.8s; /* Change this line */
     background-color: transparent;
-  }
+}
+
   .search-container a i.fa-solid {
     color: #162938;
     font-size: 18px;
@@ -218,9 +219,10 @@ header {
 
 
 .wrapper {
-    position: relative;
+    position: absolute;
     width: 400px;
     height: 440px;
+    z-index: 999;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .5);
     border-radius: 20px;

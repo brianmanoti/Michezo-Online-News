@@ -151,7 +151,7 @@ header {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: opaque;
+    background-color: grey;
     padding: 10px;
     visibility: hidden;
     opacity: 0;
@@ -181,7 +181,7 @@ header {
     cursor: pointer;
     font-size: 1.1em;
     color: #fff;
-    font-weight: 800;
+    font-weight: 8      00;
     transition: .5s;
     position: inherit;
 }
